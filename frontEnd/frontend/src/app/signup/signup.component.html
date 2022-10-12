@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-7 mx-auto shadow">
+                <div class="row">
+                    <!-- <div class='col-5 bg-info p-5'>
+                        <h3>Contact-App</h3>
+                        <p>Welcome to Our Contact app. Our contact app Provides you with the opportunity to add your contact
+                            and specify your Relationship with them</p>
+                    </div>
+     -->
+                    <div class="col-7 p-5 ">
+                        <form [formGroup]="userForm" (ngSubmit)="signUp()">
+                            <h5>SIGN UP</h5>
+                            <span class="text-danger">{{message}}</span>
+                            <input type="text" class="form-control mb-2" placeholder="Full name" formControlName="full_name">
+                            <input type="text" class="form-control mb-2" placeholder="Phone Number" formControlName="phone_no">
+                            <input type="text" class="form-control mb-2" placeholder="Address" formControlName="address">
+                            <input type="text" class="form-control mb-2" placeholder="Email" formControlName="email">
+                            <input type="password" class="form-control mb-2" placeholder="Password" formControlName="password">
+                            <p>You already have an account <b routerLink="/signup">SigIn</b>   here</p>
+                            <button class="btn btn-outline-success mb-2">Signup</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
